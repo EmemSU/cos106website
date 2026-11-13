@@ -46,14 +46,17 @@ nav a:hover, nav a.active {
 }
 
 
-/* Centers the parabox on the screen */
+/*Centers the parabox on the screen*/
 main {
     flex: 1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
     padding: 3rem 1.5rem;
 }
+
 
 /*Side-by-side container with spacing*/
 #parabox {
@@ -107,6 +110,39 @@ main {
     box-shadow: 0 4px 15px rgba(221, 160, 221, 0.3); /*Lets add some glow*/
 }
 
+/*Voice Message Section*/
+#voice-section {
+    max-width: 900px;
+    width: 100%;
+    background-color: #1a1622;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    border: 1px solid #4a2c5e;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+#voice-section h3 {
+    color: #e8a5ff;
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
+}
+
+#voice-section p {
+    color: #cccccc;
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+#voice-section audio {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    outline: none;
+    color-scheme: dark;
+}
+
+
 /*Footer Styling*/
 footer {
     text-align: center;
@@ -139,6 +175,10 @@ footer {
         width: 140px;
         height: 140px;
     }
+    #voice-section {
+        padding: 1.8rem 1.5rem;
+    }
+
 }
 
 /*ABOUT MEEEEE!*/
@@ -248,7 +288,7 @@ footer {
     font-weight: bold;
 }
 
-/* Hobby List */
+/*Hobby List*/
 .hobby-list {
     list-style-type: disc;
     padding-left: 1.4rem;
@@ -259,6 +299,41 @@ footer {
     margin-bottom: 0.5rem;
     font-size: 1.02rem;
 }
+
+/* Current Courses Table */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Prevents table from breaking layout on small phones */
+}
+
+.courses-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    margin-top: 0.5rem;
+}
+
+.courses-table th,
+.courses-table td {
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid #332244;
+}
+
+.courses-table th {
+    background-color: #211b2b;
+    color: plum;
+    font-size: 0.98rem;
+}
+
+.courses-table td {
+    color: #cccccc;
+    font-size: 0.96rem;
+}
+
+.courses-table tbody tr:hover {
+    background-color: #211b2b;
+}
+
 
 /* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
